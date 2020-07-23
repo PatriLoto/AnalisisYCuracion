@@ -1,0 +1,36 @@
+#  SQL
+
+--EJERCICIO 1 Pistas que  pertenezcan a Iron Maiden
+SELECT tracks.Name FROM tracks
+INNER JOIN albums ON albums.AlbumId = tracks.AlbumId
+INNER JOIN  artists ON albums.ArtistId = artists.ArtistId
+where artists.Name = 'Iron Maiden' 
+
+--EJERCICIO 2 Discos con más de 25 canciones
+
+SELECT Name from albums
+INNER JOIN tracks on tracks.albumid = albums.albumid
+where (SELECT TrackId, count(TrackId) AS cant from tracks
+GROUP BY Albumid
+HAVING cant =25
+ORDER BY cant desc)
+
+       
+--EJERCICIO 3 Las 10 canciones más populares
+
+select Name, count (TrackId) FROM tracks 
+INNER JOIN playlist_track 
+where tracks .TrackId = pt.TrackId
+group by Name
+order by count(tracks .TrackId) desc
+Limit 10;
+ 
+
+--EJERCICIO 4 Las 10 canciones más populares
+
+
+
+
+-- otra herramienta para ejecutar sql online https://www.sqlitetutorial.net/tryit/
+-- MODELO RELACIONAL DEL EJEMPLO: https://cdn.sqlitetutorial.net/wp-content/uploads/2018/03/sqlite-sample-database-diagram-color.pdf
+
