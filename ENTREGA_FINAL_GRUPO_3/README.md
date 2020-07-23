@@ -2,7 +2,7 @@
 
 En este repositorio se encuentran cuatro prácticos:
 
-* Práctico Nro 1.: ejercicios sobre tablas de crecimiento, pasos fronterizos y grafos. 
+* [Práctico Nro 1.:](https://github.com/PatriLoto/AnalisisYCuracion/blob/master/ENTREGA_FINAL_GRUPO_3/practico_nro_1_tablas_pasos_fronterizos.ipynb) ejercicios sobre tablas de crecimiento, pasos fronterizos y grafos. 
 
 * Práctico Nro 2.: ejercicios de limpieza de datos con el dataset de projectos de kickstarter.
 
